@@ -3,6 +3,7 @@ import { cx } from "@/src/utils";
 import { Inter, Manrope } from "next/font/google";
 import Header from "@/src/components/Header";
 import Footer from "../components/Footer";
+import AdSense from "../components/Elements/AdSense";
 import siteMetadata from "../utils/siteMetaData";
 import Script from "next/script";
 
@@ -83,6 +84,10 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
           strategy="afterInteractive"
         />
+        {/* AdSense Ad before header */}
+        <div className="w-full">
+          <AdSense />
+        </div>
         <Header />
         {children}
         <Footer />
